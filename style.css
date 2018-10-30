@@ -1,0 +1,88 @@
+#output {
+  font-size: 18px;
+}
+
+.button-lower{
+    position: absolute;
+    top: 180px;
+}
+
+.hidden{
+    display: none;
+}
+
+.icard {
+  height: 160px;
+  width: 120px;
+  padding: 3px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  display: inline-block;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.top-card {
+  font-size: 25px;
+  line-height: 20px;
+  left: 2px;
+  top: 2px;
+}
+.middle-card {
+  text-align: center;
+  font-size: 50px;
+}
+.bottom-card {
+  font-size: 25px;
+  line-height: 20px;
+  right: 1px;
+  bottom: 1px;
+  transform: rotate(-180deg);
+  /* compatability with other browsers */
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+
+#playerHand, #dealerHand{
+    height: 180px;
+    width: 500px;
+}
+
+.clubs,
+.spades {
+  color: black;
+}
+
+.hearts,
+.dia {
+  color: red;
+}
+
+#cardCover{
+    height: 160px;
+    width: 120px;
+    background-color: darkgoldenrod;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid black;
+}
+/*psuedo class .hearts is parent .suit is child anything that has these two classes together will be effected */
+/*what it is doing is adding those two classes together to make one class */
+.hearts .suit::after {
+  content: "\2665";
+}
+
+.dia .suit::after {
+  content: "\2666";
+}
+
+.spades .suit::after {
+  content: "\2660";
+}
+
+.clubs .suit::after {
+  content: "\2663";
+}
